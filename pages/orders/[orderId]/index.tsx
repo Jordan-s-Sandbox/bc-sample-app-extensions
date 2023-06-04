@@ -56,7 +56,7 @@ const InternalOrderPage = (order: ShippingAndProductsInfo) => {
                         },
                     ]}
                     items={items}
-                /> 
+                />
             </Panel>
         </>
     );

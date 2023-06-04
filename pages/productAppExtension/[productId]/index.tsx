@@ -8,13 +8,13 @@ const ProductAppExtension = () => {
     const router = useRouter();
     const productId = Number(router.query?.productId);
     const { error, isLoading, product } = useProductInfo(productId);
-    const { description, is_visible: isVisible, name, price, type } = product ?? {};   
+    const { description, is_visible: isVisible, name, price, type } = product ?? {};
     const typeCapitalized = type?.replace(/^\w/, (c: string) => c.toUpperCase());
     const isVisibleString = isVisible ? 'True' : 'False';
 
     if (isLoading) return <Loading />;
     if (error) return <ErrorMessage error={error} />;
-  
+
     return (
         <>
             <Panel header="Basic Information" marginBottom="small">
